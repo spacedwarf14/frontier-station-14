@@ -74,7 +74,7 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
         InitializeFTL();
         InitializeGridFills();
         InitializeIFF();
-        InitializeImpact();
+        InitializeImpact(_transform);
 
         SubscribeLocalEvent<ShuttleComponent, ComponentStartup>(OnShuttleStartup);
         SubscribeLocalEvent<ShuttleComponent, ComponentShutdown>(OnShuttleShutdown);
